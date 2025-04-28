@@ -6,6 +6,7 @@ Identification of bioactive peptides from public metagenomic datasets using comp
 ## Folder Structure
 Key directories:
 - 'raw_data/'
+- 'fastqc_reports/'
 
 ## Setup
 
