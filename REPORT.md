@@ -67,5 +67,6 @@ megahit -1 SRR33086926_1.FASTQ -2 SRR33086926_2.FASTQ -o ../megahit_output
     -- "-d genes.fna" genes em DNA (formato FASTA)
     -- "-o genes.gff" anotação das ORFs (formato GFF)
     -- "-p meta" modo metagenômico, usado quando o input vem de amostras ambientais (sem genoma de referência) (desativa algumas heurísticas usadas em genomas únicos)
+- "cat genes.faa | head -20 > genes_sample.faa" pega as primeiras 20 linhas para teste
 - Rodei o anticp "anticp2 -i genes_sample.faa --help -o outfile.csv outfile.csv -t 0.0"
-    -- 
+    -- "-t 0.0" threshhold com valor 0 para teste
