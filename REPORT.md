@@ -47,3 +47,25 @@ fasterq-dump SRR33086926 --split-files
 fastqc SRR33086926_1.fastq SRR33086926_2.fastq
 multiqc .
 megahit -1 SRR33086926_1.FASTQ -2 SRR33086926_2.FASTQ -o ../megahit_output
+
+## 29-04-2025
+- Baixando a sequencia no laboratório
+- Testar Fastp (ferramenta que prepara a sequencia)
+- Tentei rodar o comando normal do MEGAHIT, deu erro out of memory
+- Agora rodando com -t 12 (usar apenas 12 nucleos do processador)
+
+## 30-04-2025
+- Rodei o megahit "megahit -1 SRR33086926_1.fastq -2 SRR33086926_2.fastq -o ../megahit_output --mem-flag 0 -t 12 --k-min 21 --k-max 23 --k-step 2"
+    -- "--k-min 21" == tamanho mínimo do kmer
+    -- "--k-max 23" == tamanho máximo do kmer
+    -- "--k-step 2" == pular de 2 em 2 o tamanho do kmer
+    -- Foram usados esses parâmetros apenas para teste
+- Criei o diretório megahit_result para isolar o arquivo final.contigs.fa
+- Instalei o prodigal para fazer a predição de genes "conda install bioconda::prodigal" e ja adicionei no arquivo de env
+- Rodei o prodigal "prodigal -i final.contigs.fa -a genes.faa -d genes.fna -o genes.gff -p meta"
+    -- "-a genes.faa" proteínas preditas (formato FASTA)
+    -- "-d genes.fna" genes em DNA (formato FASTA)
+    -- "-o genes.gff" anotação das ORFs (formato GFF)
+    -- "-p meta" modo metagenômico, usado quando o input vem de amostras ambientais (sem genoma de referência) (desativa algumas heurísticas usadas em genomas únicos)
+- Rodei o anticp "anticp2 -i genes_sample.faa --help -o outfile.csv outfile.csv -t 0.0"
+    -- 
