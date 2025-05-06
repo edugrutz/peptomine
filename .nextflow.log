@@ -1,0 +1,113 @@
+mai-06 11:40:51.662 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main_pipeline.nf
+mai-06 11:40:51.696 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.5
+mai-06 11:40:51.713 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/eduardo/.nextflow/plugins; core-plugins: nf-amazon@2.9.2,nf-azure@1.10.2,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.4,nf-tower@1.9.3,nf-wave@1.7.4
+mai-06 11:40:51.725 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+mai-06 11:40:51.725 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+mai-06 11:40:51.727 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+mai-06 11:40:51.733 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+mai-06 11:40:51.744 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/eduardo/metagenomics_anticancer_peptides/nextflow.config
+mai-06 11:40:51.746 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/eduardo/metagenomics_anticancer_peptides/nextflow.config
+mai-06 11:40:51.762 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/eduardo/.nextflow/secrets/store.json
+mai-06 11:40:51.763 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@511816c0] - activable => nextflow.secret.LocalSecretsProvider@511816c0
+mai-06 11:40:51.767 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+mai-06 11:40:51.979 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+mai-06 11:40:51.989 [main] DEBUG nextflow.cli.CmdRun - Launching `main_pipeline.nf` [zen_bassi] DSL2 - revision: 320e4feb4a
+mai-06 11:40:51.990 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+mai-06 11:40:51.990 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+mai-06 11:40:52.025 [main] DEBUG nextflow.Session - Session UUID: ad269550-1c72-4973-a751-cc7a4c91de43
+mai-06 11:40:52.025 [main] DEBUG nextflow.Session - Run name: zen_bassi
+mai-06 11:40:52.025 [main] DEBUG nextflow.Session - Executor pool size: 24
+mai-06 11:40:52.030 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+mai-06 11:40:52.033 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=72; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+mai-06 11:40:52.049 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.5 build 5935
+  Created: 04-03-2025 17:55 UTC (14:55 BRST)
+  System: Linux 6.8.0-58-generic
+  Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 11.0.26+4-post-Ubuntu-1ubuntu122.04
+  Encoding: UTF-8 (UTF-8)
+  Process: 8560@lab-bioinfo-pc-09 [127.0.1.1]
+  CPUs: 24 - Mem: 15.3 GB (8.6 GB) - Swap: 2 GB (2 GB)
+mai-06 11:40:52.061 [main] DEBUG nextflow.Session - Work-dir: /home/eduardo/metagenomics_anticancer_peptides/work [ext2/ext3]
+mai-06 11:40:52.062 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/eduardo/metagenomics_anticancer_peptides/bin
+mai-06 11:40:52.067 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+mai-06 11:40:52.072 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+mai-06 11:40:52.096 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+mai-06 11:40:52.102 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 25; maxThreads: 1000
+mai-06 11:40:52.138 [main] DEBUG nextflow.Session - Session start
+mai-06 11:40:52.344 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+mai-06 11:40:52.394 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+mai-06 11:40:52.394 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+mai-06 11:40:52.397 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+mai-06 11:40:52.400 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=24; memory=15.3 GB; capacity=24; pollInterval=100ms; dumpInterval=5m
+mai-06 11:40:52.402 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+mai-06 11:40:52.445 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+mai-06 11:40:52.445 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+mai-06 11:40:52.448 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+mai-06 11:40:52.448 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+mai-06 11:40:52.451 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+mai-06 11:40:52.451 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+mai-06 11:40:52.454 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+mai-06 11:40:52.454 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+mai-06 11:40:52.456 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+mai-06 11:40:52.456 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+mai-06 11:40:52.458 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: fastqc, anticp, pyrodigal, megahit, multiqc, fastp
+mai-06 11:40:52.458 [main] DEBUG nextflow.Session - Igniting dataflow network (6)
+mai-06 11:40:52.458 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastp
+mai-06 11:40:52.459 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > fastqc
+mai-06 11:40:52.460 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > multiqc
+mai-06 11:40:52.460 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > megahit
+mai-06 11:40:52.460 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > pyrodigal
+mai-06 11:40:52.460 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > anticp
+mai-06 11:40:52.461 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_d8e3c01777ee65fa: /home/eduardo/metagenomics_anticancer_peptides/main_pipeline.nf
+mai-06 11:40:52.461 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+mai-06 11:40:52.461 [main] DEBUG nextflow.Session - Session await
+mai-06 11:40:52.536 [Actor Thread 13] INFO  nextflow.conda.CondaCache - Creating env using conda: envs/environment.yml [cache /home/eduardo/metagenomics_anticancer_peptides/work/conda/env-b87119e8152aff66-59d7997bd0b672fc1b92a92dbd80bb24]
+mai-06 11:41:56.924 [Actor Thread 13] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=envs/environment.yml path=/home/eduardo/metagenomics_anticancer_peptides/work/conda/env-b87119e8152aff66-59d7997bd0b672fc1b92a92dbd80bb24
+mai-06 11:41:56.967 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+mai-06 11:41:56.968 [Task submitter] INFO  nextflow.Session - [a8/d2b5ed] Submitted process > fastp
+mai-06 11:41:56.972 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+mai-06 11:41:56.972 [Task submitter] INFO  nextflow.Session - [1d/052b17] Submitted process > megahit
+mai-06 11:43:02.914 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: fastp; status: COMPLETED; exit: 0; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/a8/d2b5ed50a5dee2f616e9a43c64d14c]
+mai-06 11:43:02.916 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=72; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+mai-06 11:43:02.939 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+mai-06 11:43:02.939 [Task submitter] INFO  nextflow.Session - [17/51bbfb] Submitted process > fastqc
+mai-06 11:43:02.942 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=72; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+mai-06 11:43:27.275 [PublishDir-1] DEBUG nextflow.processor.PublishDir - Failed to publish file: /home/eduardo/metagenomics_anticancer_peptides/work/a8/d2b5ed50a5dee2f616e9a43c64d14c/fastp_results; to: /home/eduardo/metagenomics_anticancer_peptides/Results/fastp_results [copy] -- attempt: 1; reason: /home/eduardo/metagenomics_anticancer_peptides/work/a8/d2b5ed50a5dee2f616e9a43c64d14c/fastp_results/clean_R2.fastq -> /home/eduardo/metagenomics_anticancer_peptides/Results/fastp_results/clean_R2.fastq: Não há espaço disponível no dispositivo
+mai-06 11:43:51.440 [PublishDir-1] DEBUG nextflow.processor.PublishDir - Failed to publish file: /home/eduardo/metagenomics_anticancer_peptides/work/a8/d2b5ed50a5dee2f616e9a43c64d14c/fastp_results; to: /home/eduardo/metagenomics_anticancer_peptides/Results/fastp_results [copy] -- attempt: 2; reason: /home/eduardo/metagenomics_anticancer_peptides/work/a8/d2b5ed50a5dee2f616e9a43c64d14c/fastp_results/clean_R2.fastq -> /home/eduardo/metagenomics_anticancer_peptides/Results/fastp_results/clean_R2.fastq: Não há espaço disponível no dispositivo
+mai-06 11:44:17.257 [PublishDir-1] DEBUG nextflow.processor.PublishDir - Failed to publish file: /home/eduardo/metagenomics_anticancer_peptides/work/a8/d2b5ed50a5dee2f616e9a43c64d14c/fastp_results; to: /home/eduardo/metagenomics_anticancer_peptides/Results/fastp_results [copy] -- attempt: 3; reason: /home/eduardo/metagenomics_anticancer_peptides/work/a8/d2b5ed50a5dee2f616e9a43c64d14c/fastp_results/clean_R2.fastq -> /home/eduardo/metagenomics_anticancer_peptides/Results/fastp_results/clean_R2.fastq: Não há espaço disponível no dispositivo
+mai-06 11:45:52.557 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: megahit; status: RUNNING; exit: -; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/1d/052b17ca6ae42708a83bf063b934d9]
+~> TaskHandler[id: 3; name: fastqc; status: RUNNING; exit: -; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/17/51bbfb15983b7b2f48deb7f06791a0]
+mai-06 11:45:57.820 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: fastqc; status: COMPLETED; exit: 0; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/17/51bbfb15983b7b2f48deb7f06791a0]
+mai-06 11:45:57.841 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+mai-06 11:45:57.841 [Task submitter] INFO  nextflow.Session - [bf/a58716] Submitted process > multiqc
+mai-06 11:46:02.589 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: multiqc; status: COMPLETED; exit: 0; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/bf/a58716bff23aeaa19543878167ccc9]
+mai-06 11:50:52.577 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: megahit; status: RUNNING; exit: -; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/1d/052b17ca6ae42708a83bf063b934d9]
+mai-06 11:55:52.666 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 2; name: megahit; status: RUNNING; exit: -; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/1d/052b17ca6ae42708a83bf063b934d9]
+mai-06 11:59:40.945 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: megahit; status: COMPLETED; exit: 0; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/1d/052b17ca6ae42708a83bf063b934d9]
+mai-06 11:59:40.951 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+mai-06 11:59:40.951 [Task submitter] INFO  nextflow.Session - [f5/fa52d5] Submitted process > pyrodigal
+mai-06 12:00:52.745 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 5; name: pyrodigal; status: RUNNING; exit: -; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/f5/fa52d5c103906df826baf4eaa9e5b3]
+mai-06 12:02:28.610 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: pyrodigal; status: COMPLETED; exit: 0; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/f5/fa52d5c103906df826baf4eaa9e5b3]
+mai-06 12:02:28.614 [Actor Thread 25] INFO  nextflow.conda.CondaCache - Creating env using conda: envs/environment_anticp.yml [cache /home/eduardo/metagenomics_anticancer_peptides/work/conda/env-f95f4016f10363f3-57b8c61a8190d0f9b75417c01e826def]
+mai-06 12:03:09.953 [Actor Thread 25] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=envs/environment_anticp.yml path=/home/eduardo/metagenomics_anticancer_peptides/work/conda/env-f95f4016f10363f3-57b8c61a8190d0f9b75417c01e826def
+mai-06 12:03:09.957 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+mai-06 12:03:09.957 [Task submitter] INFO  nextflow.Session - [d7/86b397] Submitted process > anticp
+mai-06 12:05:52.759 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: anticp; status: RUNNING; exit: -; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/d7/86b397dc3d121c698d41dbce781dd3]
+mai-06 12:10:52.819 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 6; name: anticp; status: RUNNING; exit: -; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/d7/86b397dc3d121c698d41dbce781dd3]
+mai-06 12:13:34.576 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: anticp; status: COMPLETED; exit: 0; error: -; workDir: /home/eduardo/metagenomics_anticancer_peptides/work/d7/86b397dc3d121c698d41dbce781dd3]
+mai-06 12:13:34.582 [main] DEBUG nextflow.Session - Session await > all processes finished
+mai-06 12:13:34.677 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+mai-06 12:13:34.678 [main] DEBUG nextflow.Session - Session await > all barriers passed
+mai-06 12:13:34.685 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+mai-06 12:13:34.688 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+mai-06 12:13:34.697 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=6; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=35m 1s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=2; peakMemory=0; ]
+mai-06 12:13:34.723 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+mai-06 12:13:34.730 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+mai-06 12:13:34.730 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

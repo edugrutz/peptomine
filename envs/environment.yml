@@ -9,3 +9,6 @@ dependencies:
   - sra-tools
   - multiqc
   - megahit
+  - prodigal
+  - pyrodigal
+  - fastp

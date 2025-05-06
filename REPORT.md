@@ -68,5 +68,16 @@ megahit -1 SRR33086926_1.FASTQ -2 SRR33086926_2.FASTQ -o ../megahit_output
     -- "-o genes.gff" anotação das ORFs (formato GFF)
     -- "-p meta" modo metagenômico, usado quando o input vem de amostras ambientais (sem genoma de referência) (desativa algumas heurísticas usadas em genomas únicos)
 - "cat genes.faa | head -20 > genes_sample.faa" pega as primeiras 20 linhas para teste
-- Rodei o anticp "anticp2 -i genes_sample.faa --help -o outfile.csv outfile.csv -t 0.0"
+- Rodei o anticp "anticp2 -i genes_sample.faa -o outfile.csv outfile.csv -t 0.0"
     -- "-t 0.0" threshhold com valor 0 para teste
+
+## 05-05-2025
+- Comecei a montar a pipeline
+- Criei uma pasta Pipeline para isolar os arquivos enquanto testo, nela criarei as mesmas pastas que no procedimento anterior
+- Escolhi a sequência ERR14828911 por ser mais curta e agilizar os testes da pipeline
+- Criei o arquivo da pipeline "main_pipeline.nf"
+- A pipeline rodou sem erros
+- Agora vou tentar incrementar o fastp
+- Rodou certo com o fastp
+- Trocando do prodigal para o pyrodigal, pois neste é possível mudar o tamanho mínimo do ORF
+

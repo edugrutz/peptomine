@@ -1,6 +1,8 @@
-fastqc_reports/raw_reports/*
-!fastqc_reports/raw_reports/.gitkeep
-fastqc_reports/trimmed_reports/*
-!fastqc_reports/trimmed_reports/.gitkeep
 raw_data/*
 !raw_data/.gitkeep
+
+Results
+work
+
+.nextflow
+.vscode
