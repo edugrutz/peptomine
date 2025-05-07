@@ -9,14 +9,15 @@ def get_script_dir():
     script_path = Path(os.path.realpath(__file__))
     return script_path.parent
 
-def run_pipeline(input_dir, output_dir, k_min=21, k_max=121, threads=4):
-    os.makedirs(output_dir, exist_ok=True)
+def run_pipeline(input_dir, output_dir, k_min=21, k_max=25, threads=12):
+    if output_dir is None:
+        output_dir = os.path.join(input_dir, "output")
     
     script_dir = get_script_dir()
     pipeline_path = script_dir.parent / "main_pipeline.nf"
     
     if not pipeline_path.exists():
-        print(f"Erro: Arquivo do pipeline não encontrado em {pipeline_path}", file=sys.stderr)
+        print(f"Error: Pipeline file not found at {pipeline_path}", file=sys.stderr)
         sys.exit(1)
 
     command = [
@@ -31,17 +32,17 @@ def run_pipeline(input_dir, output_dir, k_min=21, k_max=121, threads=4):
     subprocess.run(command)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="PeptoMine: Pipeline para descoberta de peptídeos anticancerígenos")
-    parser.add_argument("-i", "--input", required=True, help="Diretório com arquivos FASTQ")
-    parser.add_argument("-o", "--output", required=True, help="Diretório de saída")
-    parser.add_argument("--k_min", type=int, default=21, help="Tamanho mínimo de k-mer (default: 21)")
-    parser.add_argument("--k_max", type=int, default=121, help="Tamanho máximo de k-mer (default: 121)")
-    parser.add_argument("-t", "--threads", type=int, default=4, help="Número de threads (default: 4)")
+    parser = argparse.ArgumentParser(description="PeptoMine: Pipeline for therapeutic peptide discovery")
+    parser.add_argument("-i", "--input", required=True, help="Directory containing FASTQ files")
+    parser.add_argument("-o", "--output", help="Output directory")
+    parser.add_argument("--k_min", type=int, default=21, help="Minimum k-mer size (default: 21)")
+    parser.add_argument("--k_max", type=int, default=25, help="Maximum k-mer size (default: 25)")
+    parser.add_argument("-t", "--threads", type=int, default=8, help="Number of threads (default: 12)")
     
     args = parser.parse_args()
     
     if not os.path.isdir(args.input):
-        print(f"Erro: Diretório de entrada não encontrado: {args.input}", file=sys.stderr)
+        print(f"Error: Input directory not found: {args.input}", file=sys.stderr)
         sys.exit(1)
         
     run_pipeline(args.input, args.output, args.k_min, args.k_max, args.threads)
