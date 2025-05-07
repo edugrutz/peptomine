@@ -1,6 +1,11 @@
 # PeptoMine
 A Computational Tool for Mining Therapeutic Peptides from Metagenomic Data
 
+⚠️ **Project Status: In Development**
+
+This project is under active development and not yet ready for production use. Features and structure may change at any time.
+
+
 ## 📘 Project Overview
 
 PeptoMine is a computational tool designed to mine and identify potential therapeutic peptides from metagenomic datasets. It streamlines the discovery process by integrating preprocessing, translation, peptide prediction, and annotation into a single automated pipeline, implemented using **Nextflow**.
