@@ -1,6 +1,6 @@
 // Pipeline para análise de dados de sequenciamento de RNA por shotgun
 
-process fastp {
+process trim_fastp {
     conda "envs/environment.yml"
 
     input:
@@ -19,7 +19,7 @@ process fastp {
     """
 }
 
-process fastqc {
+process quality_check_fastqc {
     conda "envs/environment.yml"
 
     input:
@@ -37,7 +37,7 @@ process fastqc {
     """
 }
 
-process multiqc {
+process report_multiqc {
     conda "envs/environment.yml"
 
     input:
@@ -54,7 +54,7 @@ process multiqc {
     """
 }
 
-process megahit {
+process assembly_megahit {
     conda "envs/environment.yml"
 
     input:
@@ -71,7 +71,7 @@ process megahit {
     """
 }
 
-process pyrodigal {
+process orf_prediction_pyrodigal {
     conda "envs/environment.yml"
 
     input:
@@ -89,7 +89,7 @@ process pyrodigal {
     """
 }
 
-process anticp {
+process peptide_prediction_anticp {
     conda "envs/environment_anticp.yml"
 
     input:
@@ -111,10 +111,10 @@ workflow {
     input = file("${params.input}/*.fastq")
 
     // Processos
-    fastp(input)
-    fastqc(fastp.out)
-    multiqc(fastqc.out)
-    megahit(input)
-    pyrodigal(megahit.out)
-    anticp(pyrodigal.out)
+    trim_fastp(input)
+    quality_check_fastqc(trim_fastp.out)
+    report_multiqc(quality_check_fastqc.out)
+    assembly_megahit(input)
+    orf_prediction_pyrodigal(assembly_megahit.out)
+    peptide_prediction_anticp(orf_prediction_pyrodigal.out)
 }
