@@ -7,3 +7,5 @@ work
 .nextflow
 .vscode
 *.nextflow.*
+kraken_database
+peptomineOut_*/
