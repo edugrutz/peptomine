@@ -81,3 +81,10 @@ megahit -1 SRR33086926_1.FASTQ -2 SRR33086926_2.FASTQ -o ../megahit_output
 - Rodou certo com o fastp
 - Trocando do prodigal para o pyrodigal, pois neste é possível mudar o tamanho mínimo do ORF
 
+## 08-05-2025
+- Instalação do Kraken2 para testes "conda install bioconda::kraken2"
+- Montando o minikraken (banco de dados reduzido)
+
+## 12-05-2025
+- Baixando o minikraken database standard-8 (https://benlangmead.github.io/aws-indexes/k2)
+
